@@ -2,6 +2,65 @@
 
 /* VARS */
 
+:root {
+  --blue-100: #e2f1fc;
+  --blue-200: #bee2f9;
+  --blue-300: #84ccf5;
+  --blue-400: #43b2ed;
+  --blue-500: #1992d4;
+  --blue-600: #0d7abc;
+  --blue-700: #0c6098;
+  --blue-800: #0e527e;
+  --blue-900: #114569;
+
+  --yellow-100: #fef2c3;
+  --yellow-200: #fee78a;
+  --yellow-300: #fdd847;
+  --yellow-400: #facc15;
+  --yellow-500: #eabd08;
+  --yellow-600: #caa204;
+  --yellow-700: #a18207;
+  --yellow-800: #856d0e;
+  --yellow-900: #715e12;
+
+  --gray-100: #e2e8f0;
+  --gray-200: #d4dde9;
+  --gray-300: #b6c7da;
+  --gray-400: #93aac7;
+  --gray-500: #7991b8;
+  --gray-600: #677ca9;
+  --gray-700: #5b6c9a;
+  --gray-800: #4e5a7f;
+  --gray-900: #424b66;
+
+  --brand-main: var(--blue-500);
+  --brand-accent: var(--yellow-400);
+
+  --6xl: 3.583rem;
+  --5xl: 2.986rem;
+  --4xl: 2.488rem;
+  --3xl: 2.074rem;
+  --2xl: 1.728rem;
+  --xl: 1.44rem;
+  --lg: 1.2rem;
+  --base: 1rem;
+  --sm: 0.833rem;
+  --xs: 0.694rem;
+  --2xs: 0.579rem;
+  --3xs: 0.482rem;
+  --4xs: 0.402rem;
+  --5xs: 0.335rem;
+  --6xs: 0.279rem;
+
+  --h1: var(--5xl);
+  --h2: var(--4xl);
+  --h3: var(--3xl);
+  --h4: var(--2xl);
+  --h5: var(--1xl);
+  --h6: var(--xl);
+  --p: var(--base);
+}
+
 /* GLOBAL */
 
 /* ELEMENTS */
