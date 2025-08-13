@@ -29,22 +29,42 @@
       </ul>
     </aside>
     <header class="app-header">
-      <section>
+      <section class="app-header__upper">
         <!-- FLEX 1: search bar -->
-        <!-- FLEX 2: notifications -->
-        <!-- FLEX 2: user image & profile -->
+        <search>
+          <form action="./search/">
+            <!-- sr-only span for text and add search icon -->
+            <label for="app-search">Search the Application</label>
+            <input type="search" id="app-search" name="q" />
+            <button type="submit">Search</button>
+          </form>
+        </search>
+        <!-- FLEX 2: notifications, user image, profile -->
+        <section class="user">
+          <!-- sr-only button text and add icons/images -->
+          <button class="user__notifications">Notifications</button>
+          <button class="user__profile">User Profile</button>
+          <p class="user__name">Morgan Oakley</p>
+        </section>
       </section>
-      <section>
+      <section class="app-header__lower">
         <!-- FLEX 1: user image & greeting -->
-        <!-- FLEX 2: nav items -->
+        <section class="greeting">
+          <img class="profile-image" />
+          <p class="gretting__text">Hi there,</p>
+          <p class="greeting__user">Morgan Oakley (@morgan)</p>
+        </section>
+        <!-- FLEX 2: action items -->
+        <ul class="user-actions">
+          <li>New</li>
+          <li>Upload</li>
+          <li>Share</li>
+        </ul>
       </section>
     </header>
     <main class="dashboard-content">
-      <!-- GROUP 1: user project cards -->
-      <!-- GROUP 2: announcements -->
-      <!-- GROUP 3: trending -->
-
-      <!-- project cards is a grid, but unsure handling of announcements and trending -->
+      <!-- GRID 1: user project cards (2 X 3) -->
+      <!-- GRID 2: announcements & trending (1 x 2) -->
     </main>
   </body>
 </html>
