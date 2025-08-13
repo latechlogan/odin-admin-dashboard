@@ -155,6 +155,11 @@
   border: 1px solid pink;
 }
 
+.card-action__icon {
+  width: var(--xl);
+  height: auto;
+}
+
 .dashboard-content__secondary {
   width: 30%;
   border: 1px solid orange;

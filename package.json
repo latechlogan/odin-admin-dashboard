@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@mdi/svg": "^7.4.47",
     "modern-normalize": "^3.0.1"
   }
 }

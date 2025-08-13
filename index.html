@@ -69,11 +69,30 @@
       <section class="dashboard-content__primary">
         <div>
           <div class="card-content"></div>
-          <div class="card-actions"></div>
+          <div class="card-action">
+            <img
+              data-icon="star-plus-outline"
+              alt=""
+              class="card-action__icon"
+            />
+            <img
+              data-icon="eye-plus-outline"
+              alt=""
+              class="card-action__icon"
+            />
+            <img data-icon="source-fork" alt="" class="card-action__icon" />
+          </div>
         </div>
       </section>
       <!-- GRID 2: announcements & trending (1 x 2) -->
       <section class="dashboard-content__secondary"></section>
     </main>
   </body>
+  <script>
+    // Set up all icons on page load
+    document.querySelectorAll("[data-icon]").forEach((img) => {
+      const iconName = img.dataset.icon;
+      img.src = `node_modules/@mdi/svg/svg/${iconName}.svg`;
+    });
+  </script>
 </html>
