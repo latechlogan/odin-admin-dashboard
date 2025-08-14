@@ -27,76 +27,66 @@
             fill: none;
           "
         >
-          <use
-            href="/node_modules/feather-icons/dist/feather-sprite.svg#circle"
-          /></svg
-        >Dashboard
+          <use data-icon="circle" href="" />
+        </svg>
+        Dashboard
       </h2>
       <ul class="sidebar__primary">
         <li>
           <svg class="feather-sidebar">
-            <use
-              href="/node_modules/feather-icons/dist/feather-sprite.svg#home"
-            /></svg
-          >Home
+            <use data-icon="home" href="" />
+          </svg>
+          Home
         </li>
         <li>
           <svg class="feather-sidebar">
-            <use
-              href="/node_modules/feather-icons/dist/feather-sprite.svg#user"
-            /></svg
-          >Profile
+            <use data-icon="user" href="" />
+          </svg>
+          Profile
         </li>
         <li>
           <svg class="feather-sidebar">
-            <use
-              href="/node_modules/feather-icons/dist/feather-sprite.svg#message-square"
-            /></svg
-          >Messages
+            <use data-icon="message-square" href="" />
+          </svg>
+          Messages
         </li>
         <li>
           <svg class="feather-sidebar">
-            <use
-              href="/node_modules/feather-icons/dist/feather-sprite.svg#clock"
-            /></svg
-          >History
+            <use data-icon="clock" href="" />
+          </svg>
+          History
         </li>
         <li>
           <svg class="feather-sidebar">
-            <use
-              href="/node_modules/feather-icons/dist/feather-sprite.svg#list"
-            /></svg
-          >Tasks
+            <use data-icon="list" href="" />
+          </svg>
+          Tasks
         </li>
         <li>
           <svg class="feather-sidebar">
-            <use
-              href="/node_modules/feather-icons/dist/feather-sprite.svg#users"
-            /></svg
-          >Communities
+            <use data-icon="users" href="" />
+          </svg>
+          Communities
         </li>
       </ul>
       <ul class="sidebar__secondary">
         <li>
           <svg class="feather-sidebar">
-            <use
-              href="/node_modules/feather-icons/dist/feather-sprite.svg#settings"
-            /></svg
-          >Settings
+            <use data-icon="settings" href="" />
+          </svg>
+          Settings
         </li>
         <li>
           <svg class="feather-sidebar">
-            <use
-              href="/node_modules/feather-icons/dist/feather-sprite.svg#help-circle"
-            /></svg
-          >Support
+            <use data-icon="help-circle" href="" />
+          </svg>
+          Support
         </li>
         <li>
           <svg class="feather-sidebar">
-            <use
-              href="/node_modules/feather-icons/dist/feather-sprite.svg#shield"
-            /></svg
-          >Privacy
+            <use data-icon="shield" href="" />
+          </svg>
+          Privacy
         </li>
       </ul>
     </aside>
@@ -105,17 +95,56 @@
     <header class="app-header">
       <section class="app-header__upper">
         <!-- FLEX 1: search bar -->
-        <search>
+        <search class="searchbar">
           <form action="./search/">
-            <label for="app-search">Search the Application</label>
+            <label for="app-search" class="searchbar__label">
+              <svg
+                style="
+                  width: var(--xl);
+                  height: var(--xl);
+                  margin: 0 var(--xs) 0 0;
+                  stroke: var(--grey-950);
+                  stroke-width: 2.2;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  fill: none;
+                "
+              >
+                <use data-icon="search" href="" />
+              </svg>
+              <span class="sr-only">Search the Application</span>
+            </label>
             <input type="search" id="app-search" name="q" />
-            <button type="submit">Search</button>
+            <button type="submit" class="sr-only">Search</button>
           </form>
         </search>
+
         <!-- FLEX 2: notifications, user image, profile -->
         <section class="user">
-          <button class="user__notifications">Notifications</button>
-          <button class="user__profile">User Profile</button>
+          <button class="user__notifications">
+            <svg
+              style="
+                width: var(--xl);
+                height: var(--xl);
+                margin: 0;
+                stroke: var(--grey-950);
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                fill: none;
+              "
+            >
+              <use data-icon="bell" href="" />
+            </svg>
+            <span class="sr-only">Notifications</span>
+          </button>
+          <button class="user__profile">
+            <img
+              src="assets/images/user-woman-1.webp"
+              alt="user profile photo"
+            />
+            <span class="sr-only">Profile</span>
+          </button>
           <p class="user__name">Morgan Oakley</p>
         </section>
       </section>
@@ -123,7 +152,7 @@
       <section class="app-header__lower">
         <!-- FLEX 1: user image & greeting -->
         <section class="greeting">
-          <img class="profile-image" />
+          <img src="assets/images/user-woman-1.webp" alt="user profile photo" />
           <p class="greeting__text">
             Hi there,<br />
             <span class="greeting__user"> Morgan Oakley (@morgan) </span>
@@ -153,25 +182,19 @@
             <section class="card-action">
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#star"
-                  />
+                  <use data-icon="star" href="" />
                 </svg>
                 <span class="sr-only">Star this project</span>
               </button>
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#eye"
-                  />
+                  <use data-icon="eye" href="" />
                 </svg>
                 <span class="sr-only">View this project</span>
               </button>
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#git-branch"
-                  />
+                  <use data-icon="git-branch" href="" />
                 </svg>
                 <span class="sr-only">Fork this project</span>
               </button>
@@ -186,25 +209,19 @@
             <section class="card-action">
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#star"
-                  />
+                  <use data-icon="star" href="" />
                 </svg>
                 <span class="sr-only">Star this project</span>
               </button>
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#eye"
-                  />
+                  <use data-icon="eye" href="" />
                 </svg>
                 <span class="sr-only">View this project</span>
               </button>
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#git-branch"
-                  />
+                  <use data-icon="git-branch" href="" />
                 </svg>
                 <span class="sr-only">Fork this project</span>
               </button>
@@ -219,25 +236,19 @@
             <section class="card-action">
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#star"
-                  />
+                  <use data-icon="star" href="" />
                 </svg>
                 <span class="sr-only">Star this project</span>
               </button>
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#eye"
-                  />
+                  <use data-icon="eye" href="" />
                 </svg>
                 <span class="sr-only">View this project</span>
               </button>
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#git-branch"
-                  />
+                  <use data-icon="git-branch" href="" />
                 </svg>
                 <span class="sr-only">Fork this project</span>
               </button>
@@ -252,25 +263,19 @@
             <section class="card-action">
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#star"
-                  />
+                  <use data-icon="star" href="" />
                 </svg>
                 <span class="sr-only">Star this project</span>
               </button>
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#eye"
-                  />
+                  <use data-icon="eye" href="" />
                 </svg>
                 <span class="sr-only">View this project</span>
               </button>
               <button>
                 <svg class="feather-card-action">
-                  <use
-                    href="/node_modules/feather-icons/dist/feather-sprite.svg#git-branch"
-                  />
+                  <use data-icon="git-branch" href="" />
                 </svg>
                 <span class="sr-only">Fork this project</span>
               </button>
@@ -341,10 +346,12 @@
     </main>
   </body>
   <script>
-    // Set up all icons on page load
-    document.querySelectorAll("[data-icon]").forEach((img) => {
-      const iconName = img.dataset.icon;
-      img.src = `node_modules/@mdi/svg/svg/${iconName}.svg`;
+    document.querySelectorAll("use[data-icon]").forEach((useElement) => {
+      const iconName = useElement.dataset.icon;
+      useElement.setAttribute(
+        "href",
+        `/node_modules/feather-icons/dist/feather-sprite.svg#${iconName}`
+      );
     });
   </script>
 </html>
