@@ -106,6 +106,27 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
+.feather-sidebar {
+  width: var(--lg);
+  height: var(--lg);
+  margin: 0 var(--xs) 0 0;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.feather-card-action {
+  width: var(--base);
+  height: var(--base);
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
 /* TYPOGRAPHY */
 
 html {
