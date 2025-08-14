@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="dashboard">
+    <!-- SIDEBAR -->
     <aside class="sidebar">
       <h2>Dashboard</h2>
-      <ul class="primary">
+      <ul class="sidebar__primary">
         <li>Home</li>
         <li>Profile</li>
         <li>Messages</li>
@@ -22,18 +23,19 @@
         <li>Tasks</li>
         <li>Communities</li>
       </ul>
-      <ul class="secondary">
+      <ul class="sidebar__secondary">
         <li>Settings</li>
         <li>Support</li>
         <li>Privacy</li>
       </ul>
     </aside>
+
+    <!-- APP HEADER -->
     <header class="app-header">
       <section class="app-header__upper">
         <!-- FLEX 1: search bar -->
         <search>
           <form action="./search/">
-            <!-- sr-only span for text and add search icon -->
             <label for="app-search">Search the Application</label>
             <input type="search" id="app-search" name="q" />
             <button type="submit">Search</button>
@@ -41,12 +43,12 @@
         </search>
         <!-- FLEX 2: notifications, user image, profile -->
         <section class="user">
-          <!-- sr-only button text and add icons/images -->
           <button class="user__notifications">Notifications</button>
           <button class="user__profile">User Profile</button>
           <p class="user__name">Morgan Oakley</p>
         </section>
       </section>
+
       <section class="app-header__lower">
         <!-- FLEX 1: user image & greeting -->
         <section class="greeting">
@@ -64,28 +66,219 @@
         </ul>
       </section>
     </header>
+
+    <!-- DASHBOARD CONTENT -->
     <main class="dashboard-content">
-      <!-- GRID 1: user project cards (2 X 3) -->
+      <!-- PRIMARY -->
       <section class="dashboard-content__primary">
-        <div>
-          <div class="card-content"></div>
-          <div class="card-action">
-            <img
-              data-icon="star-plus-outline"
-              alt=""
-              class="card-action__icon"
-            />
-            <img
-              data-icon="eye-plus-outline"
-              alt=""
-              class="card-action__icon"
-            />
-            <img data-icon="source-fork" alt="" class="card-action__icon" />
-          </div>
-        </div>
+        <h2>Your Projects</h2>
+        <section class="dashboard-content__primary-grid">
+          <section class="card">
+            <h3>Super Cool Project</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+              faucibus ex sapien vitae pellentesque sem placerat.
+            </p>
+            <section class="card-action">
+              <button>
+                <img
+                  data-icon="star-plus-outline"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">Star this project</span>
+              </button>
+              <button>
+                <img
+                  data-icon="eye-plus-outline"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">View this project</span>
+              </button>
+              <button>
+                <img
+                  data-icon="source-fork"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">Fork this project</span>
+              </button>
+            </section>
+          </section>
+          <section class="card">
+            <h3>Super Cool Project</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+              faucibus ex sapien vitae pellentesque sem placerat.
+            </p>
+            <section class="card-action">
+              <button>
+                <img
+                  data-icon="star-plus-outline"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">Star this project</span>
+              </button>
+              <button>
+                <img
+                  data-icon="eye-plus-outline"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">View this project</span>
+              </button>
+              <button>
+                <img
+                  data-icon="source-fork"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">Fork this project</span>
+              </button>
+            </section>
+          </section>
+          <section class="card">
+            <h3>Super Cool Project</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+              faucibus ex sapien vitae pellentesque sem placerat.
+            </p>
+            <section class="card-action">
+              <button>
+                <img
+                  data-icon="star-plus-outline"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">Star this project</span>
+              </button>
+              <button>
+                <img
+                  data-icon="eye-plus-outline"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">View this project</span>
+              </button>
+              <button>
+                <img
+                  data-icon="source-fork"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">Fork this project</span>
+              </button>
+            </section>
+          </section>
+          <section class="card">
+            <h3>Super Cool Project</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+              faucibus ex sapien vitae pellentesque sem placerat.
+            </p>
+            <section class="card-action">
+              <button>
+                <img
+                  data-icon="star-plus-outline"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">Star this project</span>
+              </button>
+              <button>
+                <img
+                  data-icon="eye-plus-outline"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">View this project</span>
+              </button>
+              <button>
+                <img
+                  data-icon="source-fork"
+                  alt=""
+                  class="card-action__icon"
+                  aria-hidden="true"
+                />
+                <span class="sr-only">Fork this project</span>
+              </button>
+            </section>
+          </section>
+        </section>
       </section>
-      <!-- GRID 2: announcements & trending (1 x 2) -->
-      <section class="dashboard-content__secondary"></section>
+
+      <!-- SECONDARY -->
+      <section class="dashboard-content__secondary">
+        <!-- ANNOUNCEMENTS -->
+        <section class="announcements">
+          <h2>Announcements</h2>
+          <section class="card">
+            <h3>Site Maintenance</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+              faucibus ex sapien vitae pellentesque sem placerat.
+            </p>
+            <h3>Community Share Day</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+              faucibus ex sapien vitae pellentesque sem placerat.
+            </p>
+            <h3>Updated Privacy Policy</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+              faucibus ex sapien vitae pellentesque sem placerat.
+            </p>
+          </section>
+        </section>
+
+        <!-- TRENDING -->
+        <section class="trending">
+          <h2>Trending</h2>
+          <section class="card">
+            <div class="trending__account">
+              <img src="" alt="" class="trending__account-img" />
+              <div>
+                <p class="trending__account-tag">@tegan</p>
+                <p class="trending__account-name">World Peace Builder</p>
+              </div>
+            </div>
+            <div class="trending__account">
+              <img src="" alt="" class="trending__account-img" />
+              <div>
+                <p class="trending__account-tag">@morgan</p>
+                <p class="trending__account-name">Super Cool Project</p>
+              </div>
+            </div>
+            <div class="trending__account">
+              <img src="" alt="" class="trending__account-img" />
+              <div>
+                <p class="trending__account-tag">@kendall</p>
+                <p class="trending__account-name">Life Changing App</p>
+              </div>
+            </div>
+            <div class="trending__account">
+              <img src="" alt="" class="trending__account-img" />
+              <div>
+                <p class="trending__account-tag">@alex</p>
+                <p class="trending__account-name">No Traffic Maker</p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
     </main>
   </body>
   <script>
