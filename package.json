@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "@fontsource/nata-sans": "^5.2.1",
-    "@mdi/svg": "^7.4.47",
     "modern-normalize": "^3.0.1"
   }
 }
