@@ -106,17 +106,6 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.feather-sidebar {
-  width: var(--lg);
-  height: var(--lg);
-  margin: 0 var(--xs) 0 0;
-  stroke: #fff;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-}
-
 .feather-card-action {
   width: var(--base);
   height: var(--base);
@@ -152,18 +141,43 @@ html {
   background-color: var(--brand-main);
 }
 
+.sidebar__logo {
+  font-size: var(--2xl);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .sidebar__primary,
 .sidebar__secondary {
   list-style-type: none;
   padding: 0;
-  margin: var(--base) 0;
+  margin: var(--4xl) 0;
 }
 
-.sidebar__icon {
-  width: var(--xl);
-  height: auto;
-  padding: 0;
-  margin: 0 var(--base) 0 0;
+.sidebar__primary > *,
+.sidebar__secondary > * {
+  font-size: var(--lg);
+  padding: 0 0 0 var(--5xs);
+  margin: var(--3xs) 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.feather-sidebar {
+  width: var(--lg);
+  height: var(--lg);
+  margin: 0 var(--lg) 0 0;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 .app-header {
