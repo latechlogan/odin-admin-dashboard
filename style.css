@@ -145,9 +145,6 @@ html {
   margin: 0 var(--base) 0 0;
 }
 
-.sidebar__icon path {
-}
-
 .app-header {
   grid-area: 1 / 2 / 2 / 3;
 
