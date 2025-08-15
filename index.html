@@ -142,6 +142,7 @@
             <img
               src="assets/images/user-woman-1.webp"
               alt="user profile photo"
+              aria-hidden="true"
             />
             <span class="sr-only">Profile</span>
           </button>
@@ -152,7 +153,11 @@
       <section class="app-header__lower">
         <!-- FLEX 1: user image & greeting -->
         <section class="greeting">
-          <img src="assets/images/user-woman-1.webp" alt="user profile photo" />
+          <img
+            src="assets/images/user-woman-1.webp"
+            alt="user profile photo"
+            aria-hidden="true"
+          />
           <p class="greeting__text">
             Hi there,<br />
             <span class="greeting__user"> Morgan Oakley (@morgan) </span>
@@ -160,9 +165,9 @@
         </section>
         <!-- FLEX 2: action items -->
         <ul class="user-actions">
-          <li>New</li>
-          <li>Upload</li>
-          <li>Share</li>
+          <li><a href="#" class="action-link">New</a></li>
+          <li><a href="#" class="action-link">Upload</a></li>
+          <li><a href="#" class="action-link">Share</a></li>
         </ul>
       </section>
     </header>
@@ -171,11 +176,11 @@
     <main class="dashboard-content">
       <!-- PRIMARY -->
       <section class="dashboard-content__primary">
-        <h2>Your Projects</h2>
+        <h2 class="section-heading">Your Projects</h2>
         <section class="dashboard-content__primary-grid">
           <section class="card">
-            <h3>Super Cool Project</h3>
-            <p>
+            <h3 class="card__heading">Super Cool Project</h3>
+            <p class="card__copy">
               Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
               faucibus ex sapien vitae pellentesque sem placerat.
             </p>
@@ -201,8 +206,8 @@
             </section>
           </section>
           <section class="card">
-            <h3>Super Cool Project</h3>
-            <p>
+            <h3 class="card__heading">Super Cool Project</h3>
+            <p class="card__copy">
               Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
               faucibus ex sapien vitae pellentesque sem placerat.
             </p>
@@ -228,8 +233,8 @@
             </section>
           </section>
           <section class="card">
-            <h3>Super Cool Project</h3>
-            <p>
+            <h3 class="card__heading">Super Cool Project</h3>
+            <p class="card__copy">
               Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
               faucibus ex sapien vitae pellentesque sem placerat.
             </p>
@@ -255,8 +260,62 @@
             </section>
           </section>
           <section class="card">
-            <h3>Super Cool Project</h3>
-            <p>
+            <h3 class="card__heading">Super Cool Project</h3>
+            <p class="card__copy">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+              faucibus ex sapien vitae pellentesque sem placerat.
+            </p>
+            <section class="card-action">
+              <button>
+                <svg class="feather-card-action">
+                  <use data-icon="star" href="" />
+                </svg>
+                <span class="sr-only">Star this project</span>
+              </button>
+              <button>
+                <svg class="feather-card-action">
+                  <use data-icon="eye" href="" />
+                </svg>
+                <span class="sr-only">View this project</span>
+              </button>
+              <button>
+                <svg class="feather-card-action">
+                  <use data-icon="git-branch" href="" />
+                </svg>
+                <span class="sr-only">Fork this project</span>
+              </button>
+            </section>
+          </section>
+          <section class="card">
+            <h3 class="card__heading">Super Cool Project</h3>
+            <p class="card__copy">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
+              faucibus ex sapien vitae pellentesque sem placerat.
+            </p>
+            <section class="card-action">
+              <button>
+                <svg class="feather-card-action">
+                  <use data-icon="star" href="" />
+                </svg>
+                <span class="sr-only">Star this project</span>
+              </button>
+              <button>
+                <svg class="feather-card-action">
+                  <use data-icon="eye" href="" />
+                </svg>
+                <span class="sr-only">View this project</span>
+              </button>
+              <button>
+                <svg class="feather-card-action">
+                  <use data-icon="git-branch" href="" />
+                </svg>
+                <span class="sr-only">Fork this project</span>
+              </button>
+            </section>
+          </section>
+          <section class="card">
+            <h3 class="card__heading">Super Cool Project</h3>
+            <p class="card__copy">
               Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
               faucibus ex sapien vitae pellentesque sem placerat.
             </p>
@@ -288,20 +347,22 @@
       <section class="dashboard-content__secondary">
         <!-- ANNOUNCEMENTS -->
         <section class="announcements">
-          <h2>Announcements</h2>
+          <h2 class="section-heading">Announcements</h2>
           <section class="card">
-            <h3>Site Maintenance</h3>
-            <p>
+            <h3 class="card__heading">Site Maintenance</h3>
+            <p class="card__copy">
               Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
               faucibus ex sapien vitae pellentesque sem placerat.
             </p>
-            <h3>Community Share Day</h3>
-            <p>
+            <hr />
+            <h3 class="card__heading">Community Share Day</h3>
+            <p class="card__copy">
               Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
               faucibus ex sapien vitae pellentesque sem placerat.
             </p>
-            <h3>Updated Privacy Policy</h3>
-            <p>
+            <hr />
+            <h3 class="card__heading">Updated Privacy Policy</h3>
+            <p class="card__copy">
               Lorem ipsum dolor sit amet consectetur adipiscing elit quisque
               faucibus ex sapien vitae pellentesque sem placerat.
             </p>
@@ -310,36 +371,52 @@
 
         <!-- TRENDING -->
         <section class="trending">
-          <h2>Trending</h2>
+          <h2 class="section-heading">Trending</h2>
           <section class="card">
             <div class="trending__account">
-              <img src="" alt="" class="trending__account-img" />
+              <img
+                src="assets/images/user-man-1.jpeg"
+                alt="account profile photo"
+                class="trending__account-img"
+              />
               <div>
                 <p class="trending__account-tag">@tegan</p>
                 <p class="trending__account-name">World Peace Builder</p>
               </div>
             </div>
             <div class="trending__account">
-              <img src="" alt="" class="trending__account-img" />
+              <img
+                src="assets/images/user-woman-1.webp"
+                alt="account profile photo"
+                class="trending__account-img"
+              />
               <div>
                 <p class="trending__account-tag">@morgan</p>
                 <p class="trending__account-name">Super Cool Project</p>
               </div>
             </div>
             <div class="trending__account">
-              <img src="" alt="" class="trending__account-img" />
+              <img
+                src="assets/images/user-woman-2.jpeg"
+                alt="account profile photo"
+                class="trending__account-img"
+              />
               <div>
                 <p class="trending__account-tag">@kendall</p>
                 <p class="trending__account-name">Life Changing App</p>
               </div>
             </div>
-            <div class="trending__account">
-              <img src="" alt="" class="trending__account-img" />
+            <!-- <div class="trending__account">
+              <img
+                src="assets/images/user-man-2.jpeg"
+                alt="account profile photo"
+                class="trending__account-img"
+              />
               <div>
                 <p class="trending__account-tag">@alex</p>
                 <p class="trending__account-name">No Traffic Maker</p>
               </div>
-            </div>
+            </div> -->
           </section>
         </section>
       </section>

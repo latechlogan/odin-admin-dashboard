@@ -112,7 +112,7 @@
 }
 
 .card {
-  padding: var(--xl);
+  padding: var(--base) var(--lg);
   background-color: #fff;
   border-radius: var(--3xs);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -141,16 +141,17 @@ html {
 
 .dashboard {
   width: 100vw;
-  /* height: 100vh; */
+  height: 100vh;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(240px, 20%) 1fr;
-  grid-template-rows: minmax(160px, 8%) 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 .sidebar {
   grid-area: 1 / 1 / 3 / 2;
   color: #fff;
-  padding: var(--xl);
+  padding: var(--base) var(--4xl) var(--base) var(--xl);
   background-color: var(--brand-main);
 }
 
@@ -214,7 +215,7 @@ html {
 }
 
 .app-header__upper {
-  margin: var(--2xs) 0;
+  margin: 0 0 var(--2xs) 0;
 }
 
 .searchbar {
@@ -265,11 +266,14 @@ html {
   width: var(--4xl);
   height: var(--4xl);
   padding: 0;
-  margin: 0 var(--2xl) 0 0;
+  margin: 0 var(--xl) 0 0;
   background: none;
   border: none;
   border-radius: 50%;
   overflow: hidden;
+  border: 3px solid var(--brand-accent);
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
 .user__profile > img {
@@ -298,33 +302,58 @@ html {
   height: auto;
   margin: 0 var(--base) 0 0;
   border-radius: 50%;
+  border: 4px solid var(--brand-accent);
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
 .greeting__text,
 .greeting__user {
   font-family: "Nata Sans Bold";
   font-size: var(--sm);
-  line-height: 1.2;
+  color: var(--grey-600);
+  line-height: 1.3;
   padding: 0;
   margin: 0;
 }
 
 .greeting__user {
   font-size: var(--xl);
+  color: var(--grey-950);
 }
 
 .user-actions {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
 
+.user-actions > * {
+  padding: 0;
+  margin: 0;
+}
+
+.action-link {
+  font-family: "Nata Sans Bold";
+  font-size: var(--base);
+  color: #fff;
+  text-decoration: none;
+  padding: var(--3xs) var(--2xl) var(--xs) var(--2xl);
+  margin: 0 0 0 var(--2xl);
+  background-color: var(--brand-main);
+  border-radius: var(--2xl);
+}
+
 .dashboard-content {
   grid-area: 2 / 2 / 3 / 3;
+  min-height: 0;
+  height: 100%;
   background-color: var(--cool-grey-100);
-  padding: var(--2xl);
+  padding: var(--base) var(--xl);
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -333,23 +362,168 @@ html {
   gap: var(--xl);
 }
 
+.dashboard-content .section-heading {
+  font-family: "Nata Sans Bold";
+  font-size: var(--h6);
+  padding: 0;
+  margin: 0 0 var(--xs) 0;
+}
+
 .dashboard-content__primary {
   width: 68%;
-  border: 1px solid pink;
+  height: 100%;
 }
 
 .dashboard-content__primary-grid {
+  height: calc(100% - 37px); /* 37px is height of header above it */
+  padding-bottom: var(--base); /* padding so it can scroll fully into view*/
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: min-content;
   gap: var(--base);
+  overflow: scroll;
+
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-.card-action__icon {
-  width: var(--xl);
-  height: auto;
+.dashboard-content__primary-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* need to target this better */
+.dashboard-content__primary-grid .card {
+  border-left: var(--3xs) solid var(--brand-accent);
+
+  scroll-snap-align: start;
+}
+
+.dashboard-content__primary-grid .card__heading {
+  font-family: "Nata Sans Bold";
+  font-size: var(--lg);
+  padding: 0;
+  margin: 0 0 var(--6xs) 0;
+}
+
+.dashboard-content__primary-grid .card__copy {
+  font-size: var(--sm);
+  color: var(--grey-600);
+  line-height: 1.3;
+  padding: 0;
+  margin: 0 0 var(--base) 0;
+}
+
+.dashboard-content__primary-grid .card-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dashboard-content__primary-grid .card-action button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: var(--2xs) 0 0 var(--base);
+}
+
+.feather-card-action {
+  width: var(--lg);
+  height: var(--lg);
 }
 
 .dashboard-content__secondary {
   width: 32%;
-  border: 1px solid orange;
+}
+
+.announcements .card__heading {
+  font-family: "Nata Sans Bold";
+  font-size: var(--base);
+  padding: 0;
+  margin: 0 0 var(--6xs) 0;
+}
+
+.announcements .card__copy {
+  font-size: var(--sm);
+  color: var(--grey-600);
+  line-height: 1.3;
+  padding: 0;
+  margin: 0 0 var(--base) 0;
+
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.announcements .card__copy:last-of-type {
+  margin-bottom: var(--6xs);
+}
+
+.announcements hr {
+  border: none;
+  border-top: 1px solid var(--grey-200);
+}
+
+.trending .section-heading {
+  margin-top: var(--base);
+}
+
+.trending .card-heading {
+  font-family: "Nata Sans Bold";
+  font-size: var(--base);
+  padding: 0;
+  margin: 0 0 var(--6xs) 0;
+}
+
+.trending__account {
+  width: 100%;
+  padding: 0;
+  margin: var(--xs) 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.trending__account:first-of-type {
+  margin-top: 0;
+}
+
+.trending__account:last-of-type {
+  margin-bottom: 0;
+}
+
+.trending__account-img {
+  width: var(--5xl);
+  height: var(--5xl);
+  padding: 0;
+  margin: 0 var(--xs) 0 0;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.trending__account-tag {
+  font-family: "Nata Sans Bold";
+  font-size: var(--sm);
+  /* color: var(--grey-600); */
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.trending__account-name {
+  /* font-family: "Nata Sans Bold"; */
+  font-size: var(--sm);
+  color: var(--grey-600);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
 }
